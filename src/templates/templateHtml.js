@@ -99,64 +99,64 @@ const templateHtml = `
 					<div class="lg:hidden fixed top-0 left-0 bg-black size-full duration-300 z-999 opacity-0 visible pointer-events-none menu-close fade-overlay"></div>
 					<div class="flex lg:justify-center lg:basis-auto lg:grow max-lg:flex-col justify-start font-base max-lg:fixed max-lg:h-screen max-lg:px-5 max-lg:top-0 max-lg:-left-75 max-lg:z-9999 max-lg:bg-white max-lg:w-72 max-lg:overflow-auto max-lg:duration-700 header-nav custom-scroll">
 						<div class="flex items-center relative z-9 py-6.25 lg:hidden">
-							<a href="index-2.html" class="table-cell align-middle">
+							<a href="#" class="table-cell align-middle" data-disabled="spa">
 								<img src="/assets/logo.png" alt="" class="object-contain duration-500">
 							</a>
 						</div>
 						<ul class="lg:flex flex-wrap navbar-nav">
 							<li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="index-2.html">
+								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="#" data-disabled="spa">
 									<span class="inline-block">Home</span>
 									<i class="fas fa-chevron-right lg:!hidden !block size-7 !leading-7 text-center text-xs bg-black text-white float-end"></i>
 								</a>
 								
 							</li>
 							<li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="about-1.html">
+								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="#" data-disabled="spa">
 									<span class="inline-block">About</span>
 								</a>
 							</li>
 							<li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="pages.html">
+								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="#" data-disabled="spa">
 									<span class="inline-block">Pages</span>
 									<i class="fas fa-chevron-right lg:!hidden !block size-7 !leading-7 text-center text-xs bg-black text-white float-end"></i>
 								</a>
 								
 									</li>
-									<li class="relative border-b border-black/5"><a class="block relative text-sm text-primary font-semibold py-3 lg:px-5 duration-500 hover:text-primary hover:pl-6.25" href="faq.html"><span>Faq</span></a></li>
-									<li class="relative border-b border-black/5"><a class="block relative text-sm text-primary font-semibold py-3 lg:px-5 duration-500 hover:text-primary hover:pl-6.25" href="pricing.html"><span>Pricing</span></a></li>
-									<li class="relative border-b border-black/5"><a class="block relative text-sm text-primary font-semibold py-3 lg:px-5 duration-500 hover:text-primary hover:pl-6.25" href="error-404.html"><span>Error-404</span></a></li>
-									<li class="relative border-b border-black/5"><a class="block relative text-sm text-primary font-semibold py-3 lg:px-5 duration-500 hover:text-primary hover:pl-6.25" href="compare.html"><span>Compare</span></a></li>
+									
+									
+									
+									
 								</ul>
 								
-							</li>
+							
 							<li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="destinations.html">
+								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="#" data-disabled="spa">
 									<span class="inline-block">Destinations</span>
 									<i class="fas fa-chevron-right lg:!hidden !block size-7 !leading-7 text-center text-xs bg-black text-white float-end"></i>
 								</a>
 								
 							</li>
 							<li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="tours.html">
+								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="#" data-disabled="spa">
 									<span class="inline-block">Tours</span>
 									<i class="fas fa-chevron-right lg:!hidden !block size-7 !leading-7 text-center text-xs bg-black text-white float-end"></i>
 								</a>
 								
 							</li>
 							<li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="blogs.html">
+								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="#" data-disabled="spa">
 									<span class="inline-block">Blogs</span>
 									<i class="fas fa-chevron-right lg:!hidden !block size-7 !leading-7 text-center text-xs bg-black text-white float-end"></i>
 								</a>
 								
 							</li>
 							<li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="contact.html">
+								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="#" data-disabled="spa">
 									<span class="inline-block">Contact</span>
 								</a>
 							</li>
-						</ul>
+						
 						<div class="lg:hidden block max-lg:p-5 text-center mt-auto">
 							<ul>
 								<li class="inline-block mx-0.5">
@@ -980,17 +980,13 @@ const templateHtml = `
 											</div>
 											<div class="bg-white p-7.5 rounded-bl-3xl rounded-br-3xl shadow-[0px_18px_18px_rgba(0,106,114,0.15)]">
 												<div class="mb-7.5 flex">
-													<div class="w-20">
-														<span class="text-citrusyellow text-28/[1.3] font-black block">Call</span>
-														<span class="text-base block">+91 9503953737</span>
-													</div>
-													<div class="w-[calc(100%_-_90px)] text-xl/[1.3] font-title font-medium">
+								<div class="w-full text-xl/[1.3] font-title font-medium">
 														<a href="tour-detail.html" class="text-primary hover:text-citrusyellow duration-500">Nusa Penida is a stunning island located just southeast of Bali</a>
 													</div>
 												</div>
 												<div class="flex itmes-center justify-between">
 													<div class="trv-book">
-														<a href="tour-detail.html" class="site-button outline">Book Now</a>
+														<a href="tour-detail.html" class="site-button outline">Call Now</a>
 													</div>
 													<div>
 														<span>(4.8 Review)</span>
@@ -1025,17 +1021,13 @@ const templateHtml = `
 											</div>
 											<div class="bg-white p-7.5 rounded-bl-3xl rounded-br-3xl shadow-[0px_18px_18px_rgba(0,106,114,0.15)]">
 												<div class="mb-7.5 flex">
-													<div class="w-20">
-														<span class="text-citrusyellow text-28/[1.3] font-black block">$75</span>
-														<span class="text-base block">+91 9503953737</span>
-													</div>
-													<div class="w-[calc(100%_-_90px)] text-xl/[1.3] font-title font-medium">
+								<div class="w-full text-xl/[1.3] font-title font-medium">
 														<a href="tour-detail.html" class="text-primary hover:text-citrusyellow duration-500">Deogyusan  mountain. Its highest peak is 1,614 m. above sea level</a>
 													</div>
 												</div>
 												<div class="flex itmes-center justify-between">
 													<div class="trv-book">
-														<a href="tour-detail.html" class="site-button outline">Book Now</a>
+														<a href="tour-detail.html" class="site-button outline">Call Now</a>
 													</div>
 													<div>
 														<span>(4.8 Review)</span>
@@ -1070,17 +1062,13 @@ const templateHtml = `
 											</div>
 											<div class="bg-white p-7.5 rounded-bl-3xl rounded-br-3xl shadow-[0px_18px_18px_rgba(0,106,114,0.15)]">
 												<div class="mb-7.5 flex">
-													<div class="w-20">
-														<span class="text-citrusyellow text-28/[1.3] font-black block">$99</span>
-														<span class="text-base block">+91 9503953737</span>
-													</div>
-													<div class="w-[calc(100%_-_90px)] text-xl/[1.3] font-title font-medium">
+								<div class="w-full text-xl/[1.3] font-title font-medium">
 														<a href="tour-detail.html" class="text-primary hover:text-citrusyellow duration-500">The bridge offers panoramic views of Tokyo Tower, the skyline.</a>
 													</div>
 												</div>
 												<div class="flex itmes-center justify-between">
 													<div class="trv-book">
-														<a href="tour-detail.html" class="site-button outline">Book Now</a>
+														<a href="tour-detail.html" class="site-button outline">Call Now</a>
 													</div>
 													<div>
 														<span>(4.8 Review)</span>
@@ -1115,17 +1103,13 @@ const templateHtml = `
 											</div>
 											<div class="bg-white p-7.5 rounded-bl-3xl rounded-br-3xl shadow-[0px_18px_18px_rgba(0,106,114,0.15)]">
 												<div class="mb-7.5 flex">
-													<div class="w-20">
-														<span class="text-citrusyellow text-28/[1.3] font-black block">$149</span>
-														<span class="text-base block">+91 9503953737</span>
-													</div>
-													<div class="w-[calc(100%_-_90px)] text-xl/[1.3] font-title font-medium">
+								<div class="w-full text-xl/[1.3] font-title font-medium">
 														<a href="tour-detail.html" class="text-primary hover:text-citrusyellow duration-500">Nusa Penida is a stunning island located just southeast of Bali</a>
 													</div>
 												</div>
 												<div class="flex itmes-center justify-between">
 													<div class="trv-book">
-														<a href="tour-detail.html" class="site-button outline">Book Now</a>
+														<a href="tour-detail.html" class="site-button outline">Call Now</a>
 													</div>
 													<div>
 														<span>(4.8 Review)</span>
@@ -1160,17 +1144,13 @@ const templateHtml = `
 											</div>
 											<div class="bg-white p-7.5 rounded-bl-3xl rounded-br-3xl shadow-[0px_18px_18px_rgba(0,106,114,0.15)]">
 												<div class="mb-7.5 flex">
-													<div class="w-20">
-														<span class="text-citrusyellow text-28/[1.3] font-black block">$129</span>
-														<span class="text-base block">+91 9503953737</span>
-													</div>
-													<div class="w-[calc(100%_-_90px)] text-xl/[1.3] font-title font-medium">
+								<div class="w-full text-xl/[1.3] font-title font-medium">
 														<a href="tour-detail.html" class="text-primary hover:text-citrusyellow duration-500">Deogyusan  mountain. Its highest peak is 1,614 m. above sea level</a>
 													</div>
 												</div>
 												<div class="flex itmes-center justify-between">
 													<div class="trv-book">
-														<a href="tour-detail.html" class="site-button outline">Book Now</a>
+														<a href="tour-detail.html" class="site-button outline">Call Now</a>
 													</div>
 													<div>
 														<span>(4.8 Review)</span>
@@ -1205,17 +1185,13 @@ const templateHtml = `
 											</div>
 											<div class="bg-white p-7.5 rounded-bl-3xl rounded-br-3xl shadow-[0px_18px_18px_rgba(0,106,114,0.15)]">
 												<div class="mb-7.5 flex">
-													<div class="w-20">
-														<span class="text-citrusyellow text-28/[1.3] font-black block">$79</span>
-														<span class="text-base block">+91 9503953737</span>
-													</div>
-													<div class="w-[calc(100%_-_90px)] text-xl/[1.3] font-title font-medium">
+								<div class="w-full text-xl/[1.3] font-title font-medium">
 														<a href="tour-detail.html" class="text-primary hover:text-citrusyellow duration-500">The bridge offers panoramic views of Tokyo Tower, the skyline.</a>
 													</div>
 												</div>
 												<div class="flex itmes-center justify-between">
 													<div class="trv-book">
-														<a href="tour-detail.html" class="site-button outline">Book Now</a>
+														<a href="tour-detail.html" class="site-button outline">Call Now</a>
 													</div>
 													<div>
 														<span>(4.8 Review)</span>
@@ -2024,7 +2000,7 @@ const templateHtml = `
 					</div>
 					<div class="py-10 text-white relative z-1 font-normal after:absolute after:bg-primary after:max-w-135 after:h-px after:left-1/2 after:top-0 after:-translate-x-1/2">
 						<div class="container">
-							<p class="copyrights-text text-center text-sm font-semibold">© <span class="current-year">2026</span> <span class="inline-block text-citrusyellow uppercase text-center text-sm font-semibold">Kabeerr Travelz Hub</span> All Rights Reserved.</p>
+							<p class="copyrights-text text-center text-sm font-semibold"> <span class="current-year">2026</span> <span class="inline-block text-citrusyellow uppercase text-center text-sm font-semibold">Kabeerr Travelz Hub</span> All Rights Reserved.</p>
 						</div>
 					</div>		
 				</div>
