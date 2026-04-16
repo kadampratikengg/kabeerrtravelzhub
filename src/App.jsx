@@ -10,16 +10,16 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <BrowserRouter>
-      <div className="app-shell">
-        <main className="flex-1 pt-4">
+      <div className='app-shell'>
+        <main className='flex-1 pt-4'>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/pages" element={<Pages />} />
-            <Route path="/destinations" element={<Destinations />} />
-            <Route path="/tours" element={<Tours />} />
-            <Route path="/blogs" element={<Blogs />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path='/' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/pages' element={<Pages />} />
+            <Route path='/destinations' element={<Destinations />} />
+            <Route path='/tours' element={<Tours />} />
+            <Route path='/blogs' element={<Blogs />} />
+            <Route path='/contact' element={<Contact />} />
           </Routes>
         </main>
       </div>

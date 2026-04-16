@@ -42,7 +42,7 @@ const loadScript = (src) =>
     document.body.appendChild(tag);
   });
 
-function Home() {
+export default function Home() {
   const [markup, setMarkup] = useState('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -52,8 +52,9 @@ function Home() {
       const doc = new DOMParser().parseFromString(templateHtml, 'text/html');
       const body = doc.body.cloneNode(true);
 
-      // keep only content up to News section, drop anything after it
-      const newsSection = body.querySelector('[class*="bg-paleaqua"][class*="pb-40"]');
+      const newsSection = body.querySelector(
+        '[class*="bg-paleaqua"][class*="pb-40"]',
+      );
       if (newsSection) {
         let node = newsSection.nextSibling;
         while (node) {
@@ -70,8 +71,33 @@ function Home() {
       document.body.className = doc.body.className || '';
 
       body.querySelectorAll('a[href$=".html"]').forEach((a) => {
-        a.setAttribute('data-disabled', 'spa');
-        a.href = '#';
+        const href = a.getAttribute('href');
+        if (href === 'about-1.html') a.href = '/about';
+        else if (href === 'destination-detail.html') a.href = '/destinations';
+        else if (href === 'tour-detail.html') a.href = '/tours';
+        else if (href === 'blog-detail.html') a.href = '/blogs';
+        else if (href === 'contact.html') a.href = '/contact';
+        else if (href === 'services.html') a.href = '/pages';
+        else {
+          a.setAttribute('data-disabled', 'spa');
+          a.href = '#';
+        }
+        a.removeAttribute('data-disabled');
+      });
+
+      body.querySelectorAll('a[href="#"]').forEach((a) => {
+        const span = a.querySelector('span');
+        if (span) {
+          const text = span.textContent.toLowerCase();
+          if (text === 'home') a.href = '/';
+          else if (text === 'about') a.href = '/about';
+          else if (text === 'pages') a.href = '/pages';
+          else if (text === 'destinations') a.href = '/destinations';
+          else if (text === 'tours') a.href = '/tours';
+          else if (text === 'blogs') a.href = '/blogs';
+          else if (text === 'contact') a.href = '/contact';
+          a.removeAttribute('data-disabled');
+        }
       });
 
       setMarkup(body.innerHTML);
@@ -86,6 +112,7 @@ function Home() {
   useEffect(() => {
     if (!markup) return;
     let cancelled = false;
+
     (async () => {
       for (const src of scriptSources) {
         if (cancelled) break;
@@ -97,15 +124,23 @@ function Home() {
           break;
         }
       }
+
       const loader = document.querySelector('.loading-area');
       if (loader) loader.remove();
-      if (!cancelled && window.Travlla && typeof window.Travlla.init === 'function') {
+
+      if (
+        !cancelled &&
+        window.Travlla &&
+        typeof window.Travlla.init === 'function'
+      ) {
         window.Travlla.init();
       }
-      document.querySelectorAll('a[data-disabled="spa"]').forEach((a) =>
-        a.addEventListener('click', (e) => e.preventDefault()),
-      );
+
+      document
+        .querySelectorAll('a[data-disabled="spa"]')
+        .forEach((a) => a.addEventListener('click', (e) => e.preventDefault()));
     })();
+
     return () => {
       cancelled = true;
     };
@@ -113,9 +148,12 @@ function Home() {
 
   const openWhatsApp = () => {
     const number = import.meta.env.VITE_WHATSAPP_NUMBER;
-    const message = import.meta.env.VITE_WHATSAPP_MESSAGE || 'Hi! I want to know more.';
+    const message =
+      import.meta.env.VITE_WHATSAPP_MESSAGE || 'Hi! I want to know more.';
     if (!number) {
-      alert('WhatsApp number missing. Add VITE_WHATSAPP_NUMBER to your .env file.');
+      alert(
+        'WhatsApp number missing. Add VITE_WHATSAPP_NUMBER to your .env file.',
+      );
       return;
     }
     const url = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
@@ -123,32 +161,33 @@ function Home() {
   };
 
   return (
-    <div className="relative">
+    <div className='relative'>
       {loading && (
-        <div className="flex items-center justify-center min-h-screen text-white bg-black">
-          Loading…
+        <div className='flex items-center justify-center min-h-screen text-white bg-black'>
+          Loadingâ€¦
         </div>
       )}
       {error && !loading && (
-        <div className="flex items-center justify-center min-h-screen text-white bg-red-700">
+        <div className='flex items-center justify-center min-h-screen text-white bg-red-700'>
           {error}
         </div>
       )}
       {!loading && !error && (
-        <div className="template-body" dangerouslySetInnerHTML={{ __html: markup }} />
+        <div
+          className='template-body'
+          dangerouslySetInnerHTML={{ __html: markup }}
+        />
       )}
 
       <button
-        type="button"
+        type='button'
         onClick={openWhatsApp}
-        className="fixed bottom-6 right-6 z-[1000] bg-[#25D366] text-white shadow-2xl rounded-full h-14 px-5 flex items-center gap-3 hover:scale-105 transition-all duration-300"
-        aria-label="Chat on WhatsApp"
+        className='fixed bottom-6 right-6 z-[1000] bg-[#25D366] text-white shadow-2xl rounded-full h-14 px-5 flex items-center gap-3 hover:scale-105 transition-all duration-300'
+        aria-label='Chat on WhatsApp'
       >
-        <span className="text-xl">?</span>
-        <span className="font-semibold">Chat on WhatsApp</span>
+        <span className='text-xl'>?</span>
+        <span className='font-semibold'>Chat on WhatsApp</span>
       </button>
     </div>
   );
 }
-
-export default Home;
