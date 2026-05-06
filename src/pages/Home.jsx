@@ -42,6 +42,66 @@ const loadScript = (src) =>
     document.body.appendChild(tag);
   });
 
+const initMobileMenu = () => {
+  document.querySelectorAll('header').forEach((header) => {
+    const toggler = header.querySelector('.xmenu-toggler');
+    const headerNav = header.querySelector('.header-nav');
+    const menuClose = header.querySelector('.menu-close');
+    if (!toggler || !headerNav || toggler.dataset.mobileMenuBound === 'true') {
+      return;
+    }
+
+    toggler.dataset.mobileMenuBound = 'true';
+
+    const closeMenu = () => {
+      headerNav.classList.remove('show');
+      toggler.classList.remove('open');
+      toggler.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('overflow-hidden');
+    };
+
+    const toggleMenu = () => {
+      const isOpen = headerNav.classList.toggle('show');
+      toggler.classList.toggle('open', isOpen);
+      toggler.setAttribute('aria-expanded', String(isOpen));
+      document.body.classList.toggle('overflow-hidden', isOpen);
+    };
+
+    toggler?.addEventListener('click', toggleMenu);
+    menuClose?.addEventListener('click', closeMenu);
+    headerNav.querySelectorAll('a').forEach((link) => {
+      link?.addEventListener('click', closeMenu);
+    });
+  });
+};
+
+const initPopularDestinationsSlider = () => {
+  const slider = document.querySelector('.reviewtwo-slider');
+  if (!slider || !window.Swiper || slider.swiper) return;
+
+  new window.Swiper(slider, {
+    speed: 900,
+    loop: true,
+    spaceBetween: 30,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: slider.querySelector('.swiper-button-next'),
+      prevEl: slider.querySelector('.swiper-button-prev'),
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 4,
+      },
+    },
+  });
+};
+
 export default function Home() {
   const [markup, setMarkup] = useState('');
   const [loading, setLoading] = useState(true);
@@ -128,17 +188,24 @@ export default function Home() {
       const loader = document.querySelector('.loading-area');
       if (loader) loader.remove();
 
+      initMobileMenu();
+      initPopularDestinationsSlider();
+
       if (
         !cancelled &&
         window.Travlla &&
         typeof window.Travlla.init === 'function'
       ) {
         window.Travlla.init();
+        initMobileMenu();
+        initPopularDestinationsSlider();
       }
 
       document
         .querySelectorAll('a[data-disabled="spa"]')
-        .forEach((a) => a.addEventListener('click', (e) => e.preventDefault()));
+        .forEach((a) =>
+          a?.addEventListener('click', (e) => e.preventDefault()),
+        );
     })();
 
     return () => {

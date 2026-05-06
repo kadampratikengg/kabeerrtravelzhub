@@ -97,66 +97,49 @@ const templateHtml = `
 						<span class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-300 top-8 w-4"></span>
 					</button>
 					<div class="lg:hidden fixed top-0 left-0 bg-black size-full duration-300 z-999 opacity-0 visible pointer-events-none menu-close fade-overlay"></div>
-					<div class="flex lg:justify-center lg:basis-auto lg:grow max-lg:flex-col justify-start font-base max-lg:fixed max-lg:h-screen max-lg:px-5 max-lg:top-0 max-lg:-left-75 max-lg:z-9999 max-lg:bg-white max-lg:w-72 max-lg:overflow-auto max-lg:duration-700 header-nav custom-scroll">
+					<div id="mobile-menu" class="flex lg:justify-center lg:basis-auto lg:grow max-lg:flex-col justify-start font-base max-lg:fixed max-lg:h-screen max-lg:px-5 max-lg:top-0 max-lg:-left-75 max-lg:z-9999 max-lg:bg-white max-lg:w-72 max-lg:overflow-auto max-lg:duration-700 header-nav custom-scroll">
 						<div class="flex items-center relative z-9 py-6.25 lg:hidden">
-							<a href="#" class="table-cell align-middle" data-disabled="spa">
+							<a href="/" class="table-cell align-middle">
 								<img src="/assets/logo.png" alt="" class="object-contain duration-500">
 							</a>
 						</div>
 						<ul class="lg:flex flex-wrap navbar-nav">
 							<li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="#" data-disabled="spa">
+								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="/">
 									<span class="inline-block">Home</span>
-									<i class="fas fa-chevron-right lg:!hidden !block size-7 !leading-7 text-center text-xs bg-black text-white float-end"></i>
 								</a>
-								
 							</li>
 							<li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="#" data-disabled="spa">
+								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="/about">
 									<span class="inline-block">About</span>
 								</a>
 							</li>
 							<li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="#" data-disabled="spa">
+								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="/pages">
 									<span class="inline-block">Pages</span>
-									<i class="fas fa-chevron-right lg:!hidden !block size-7 !leading-7 text-center text-xs bg-black text-white float-end"></i>
 								</a>
-								
-									</li>
-									
-									
-									
-									
-								</ul>
-								
-							
+							</li>
 							<li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="#" data-disabled="spa">
+								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="/destinations">
 									<span class="inline-block">Destinations</span>
-									<i class="fas fa-chevron-right lg:!hidden !block size-7 !leading-7 text-center text-xs bg-black text-white float-end"></i>
 								</a>
-								
 							</li>
 							<li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="#" data-disabled="spa">
+								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="/tours">
 									<span class="inline-block">Tours</span>
-									<i class="fas fa-chevron-right lg:!hidden !block size-7 !leading-7 text-center text-xs bg-black text-white float-end"></i>
 								</a>
-								
 							</li>
 							<li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="#" data-disabled="spa">
+								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="/blogs">
 									<span class="inline-block">Blogs</span>
-									<i class="fas fa-chevron-right lg:!hidden !block size-7 !leading-7 text-center text-xs bg-black text-white float-end"></i>
 								</a>
-								
 							</li>
 							<li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="#" data-disabled="spa">
+								<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="/contact">
 									<span class="inline-block">Contact</span>
 								</a>
 							</li>
-						
+						</ul>
 						<div class="lg:hidden block max-lg:p-5 text-center mt-auto">
 							<ul>
 								<li class="inline-block mx-0.5">
@@ -187,7 +170,6 @@ const templateHtml = `
 										<span class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-300 top-3.25 w-7 max-lg:hidden"></span>
 										<span class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-0 top-5.5 w-7 max-lg:hidden"></span>
 										<span class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-300 top-8 w-7 max-lg:hidden"></span>
-										<b class="lg:hidden uppercase fixed -rotate-90 -translate-y-1/2 -right-7.5 bg-primary px-5 rounded-t-2lg text-white tracking-[2px] top-1/2">Info</b>
 									</button>
 								</li>
 							</ul>
@@ -274,84 +256,42 @@ const templateHtml = `
 					</div>
 				</div>
 				<!-- Banner Style One End -->
-				
-				<!-- SEARCH BAR START-->
-				<div class="bg-lightturquoise xl:pt-17.5 pt-12.5 px-5">
-					<div class="max-w-250 mx-auto lg:h-25 p-1.75 bg-paleaqua lg:rounded-25xl rounded-2xl">
-						<div class="bg-white lg:rounded-25xl rounded-2xl sm:pt-3 sm:pr-3.25 sm:pb-2.25 sm:pl-10 p-5 h-full">
-							<form>
-								<div class="flex justify-between items-center max-lg:flex-wrap max-sm:flex-col">
-									<div class="lg:w-42.5 sm:w-[48%] w-full max-sm:mb-5 max-lg:mb-5 max-lg:border-b border-paleaqua">
-										<div class="custom-select style-1" data-label="Color">
-											<label class="pb-1.25 flex items-center">
-												<i class="inline-block mr-5">
-													<img src="assets/images/search-icon/icon1.png" alt="Image" class="h-5 w-full">
-												</i>Location
-											</label>
-											<select class="dynamic-select" id="sortingSelect">
-												<option value="Zealand" selected>New Zealand</option>
-												<option value="Paris">Paris</option>
-												<option value="Bali">Bali</option>
-												<option value="Indonesia">Indonesia</option>
-											</select>
-										</div>
-									</div>
-									<div class="lg:w-42.5 sm:w-[48%] w-full max-sm:mb-5 max-lg:mb-5 max-lg:border-b border-paleaqua">
-										<div class="custom-select style-1">
-											<label class="pb-1.25 flex items-center">
-												<i class="inline-block mr-5"><img src="assets/images/search-icon/icon2.png" alt="Image" class="h-5 w-full"></i>
-												Activity Type
-											</label>
-											<select class="dynamic-select" aria-label="Default select example">
-												<option selected>Adventure</option>
-												<option value="1">Beyond the Edge</option>
-												<option value="2">Whispering Peaks</option>
-												<option value="3">Wave Riders</option>
-											</select>
-										</div>
-									</div>
-									<div class="lg:w-42.5 sm:w-[48%] w-full max-sm:mb-5 max-lg:mb-5 max-lg:border-b border-paleaqua">
-										<div class="">
-											<label class="pb-1.25 flex items-center"><i class="inline-block mr-5"><img src="assets/images/search-icon/icon3.png" class="h-5 w-full" alt="Image"></i>Date</label>
-											<div class="relative">
-												<input class="outline-none h-8.5 p-0 font-title font-bold text-xl text-primary bg-transparent placeholder:!text-primary flatpickr1" placeholder="Date">
-												<span class="absolute right-3.75 bottom-0 text-input text-lg pointer-events-none">
-													<i class="fa fa-solid fa-calendar-days"></i>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="lg:w-42.5 sm:w-[48%] w-full max-sm:mb-5 max-lg:mb-5 max-lg:border-b border-paleaqua">
-										<div class="">
-											<label for="travelerCount" class="pb-1.25 flex items-center"><i class="inline-block mr-5"><img src="assets/images/search-icon/icon4.png" class="h-5 w-full" alt="Image"></i>Traveler</label>
-											<div class="input-group">
-												<span class="flex gap-2.5 w-full">
-													<input id="travelerCount" type="number" step="1" value="1" name="quantity" class="touchspin h-6 lg:w-17.5 w-full leading-6.75 text-primary font-bold outline-none font-title text-xl">
-													<button type="button" aria-label="Decrease traveler count" value="-" data-field="quantity" class="button-minus cursor-pointer size-6 leading-6.75 text-center text-base text-input"><i class="las la-minus text-lg" aria-hidden="true"></i></button>
-													<button type="button" aria-label="Increase traveler count" value="+" data-field="quantity" class="button-plus cursor-pointer size-6 leading-6.75 text-center text-base text-input"><i class="las la-plus text-lg" aria-hidden="true"></i></button>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="lg:w-auto w-full">
-										<div class="trv-search-st1-search-btn">
-											<button aria-label="Search" class="text-28 text-white rounded-full size-15 bg-primary max-lg:!w-full duration-500 cursor-pointer"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
-										</div>
-									</div>
-								</div>
-							</form>
+
+				<!-- VIDEO SECTION START-->
+				<div class="home-video-section bg-lightturquoise xl:pt-17.5 pt-12.5 px-5">
+					<div class="w-full mx-auto">
+						<div class="text-center max-w-150 mx-auto md:mb-10 mb-7.5">
+							<h2 class="xl:text-46 md:text-40 text-3xl mb-2.5"><span class="text-citrusyellow">Travel </span>Videos</h2>
+							<p class="text-base">Watch featured journeys and trip highlights</p>
+						</div>
+						<div class="home-featured-video overflow-hidden rounded-3xl bg-primary shadow-xl">
+							<iframe class="w-full h-full" src="https://www.youtube.com/embed/Zcx247sfxPM?autoplay=1&mute=1&rel=0&playsinline=1&si=yoINV7QOtAdKo5xl" title="Featured travel video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+						</div>
+						<div class="home-video-slider" aria-label="More travel videos">
+							<div class="home-video-slide overflow-hidden rounded-2xl bg-primary shadow-md">
+								<iframe class="w-full h-full" src="https://www.youtube.com/embed/Zcx247sfxPM?rel=0&playsinline=1&si=yoINV7QOtAdKo5xl" title="Travel video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+							</div>
+							<div class="home-video-slide overflow-hidden rounded-2xl bg-primary shadow-md">
+								<iframe class="w-full h-full" src="https://www.youtube.com/embed/Zcx247sfxPM?rel=0&playsinline=1&si=yoINV7QOtAdKo5xl" title="Travel video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+							</div>
+							<div class="home-video-slide overflow-hidden rounded-2xl bg-primary shadow-md">
+								<iframe class="w-full h-full" src="https://www.youtube.com/embed/Zcx247sfxPM?rel=0&playsinline=1&si=yoINV7QOtAdKo5xl" title="Travel video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+							</div>
+							<div class="home-video-slide overflow-hidden rounded-2xl bg-primary shadow-md">
+								<iframe class="w-full h-full" src="https://www.youtube.com/embed/Zcx247sfxPM?rel=0&playsinline=1&si=yoINV7QOtAdKo5xl" title="Travel video 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
-				<!-- SEARCH BAR END--> 
+				<!-- VIDEO SECTION END-->
 				
 				<!--POPULAR DESTINATION SECTION START-->
 				<div class="relative overflow-hidden md:pb-22.5 pb-10 md:pt-30 pt-17.5 bg-contain bg-[bottom_center] bg-repeat-x bg-[url(../images/background/Cloud-bg.png)]">
 					<div class="container">
 						<!-- TITLE START-->
 						<div class="text-center max-w-150 mx-auto md:mb-15 mb-7.5">
-							<h2 class="xl:text-46 md:text-40 text-3xl mb-2.5"><span class="text-citrusyellow">Popular </span>Destination</h2>
-							<p class="text-base">Destinations worth exploring! Here are a few popular spots</p>
+							<h2 class="xl:text-46 md:text-40 text-3xl mb-2.5"><span class="text-citrusyellow">Popular Indian </span>Destinations</h2>
+							<p class="text-base">Maharashtra destinations worth exploring with family and friends</p>
 							<div class="-mt-7">
 								<img src="assets/images/background/Title-Separator.png" alt="Image" class="w-117.5 inline-block" width="470" height="70">
 							</div>
@@ -363,10 +303,10 @@ const templateHtml = `
 									<div class="swiper-slide">
 										<div class="relative z-1 group">
 											<div class="rounded-3xl overflow-hidden">
-												<a href="destination-detail.html"><img src="assets/images/destinations/style1/pic1.jpg" width="309" height="500" alt="Image" class="w-full h-125 object-cover object-center"></a>
+												<a href="/destinations"><img src="https://source.unsplash.com/700x1000/?mumbai,gateway-of-india" width="309" height="500" alt="Mumbai, Maharashtra" class="w-full h-125 object-cover object-center" loading="lazy"></a>
 											</div>
 											<div>
-												<h3 class="text-28"><a href="destination-detail.html" class="block text-primary bg-white text-center p-5 rounded-3xl absolute left-0 right-0 -bottom-px duration-500 group-hover:text-white group-hover:bg-primary">Paris</a></h3>
+												<h3 class="text-28"><a href="/destinations" class="block text-primary bg-white text-center p-5 rounded-3xl absolute left-0 right-0 -bottom-px duration-500 group-hover:text-white group-hover:bg-primary">Mumbai</a></h3>
 											</div>
 											<div class="absolute -z-1 top-0 left-1/2 -translate-x-1/2 duration-500 group-hover:-top-7.5">
 												<img src="assets/images/destinations/hotballon-right.png" alt="image" width="155" height="233" class="w-full max-w-75 mx-auto block duration-500">
@@ -377,10 +317,10 @@ const templateHtml = `
 									<div class="swiper-slide">
 										<div class="relative z-1 group">
 											<div class="rounded-3xl overflow-hidden">
-												<a href="destination-detail.html"><img src="assets/images/destinations/style1/pic2.jpg" width="309" height="500" alt="Image" class="w-full h-125 object-cover object-center"></a>
+												<a href="/destinations"><img src="https://source.unsplash.com/700x1000/?pune,maharashtra" width="309" height="500" alt="Pune, Maharashtra" class="w-full h-125 object-cover object-center" loading="lazy"></a>
 											</div>
 											<div>
-												<h3 class="text-28"><a href="destination-detail.html"  class="block text-primary bg-white text-center p-5 rounded-3xl absolute left-0 right-0 -bottom-px duration-500 group-hover:text-white group-hover:bg-primary">Maldives</a></h3>
+												<h3 class="text-28"><a href="/destinations" class="block text-primary bg-white text-center p-5 rounded-3xl absolute left-0 right-0 -bottom-px duration-500 group-hover:text-white group-hover:bg-primary">Pune</a></h3>
 											</div>
 											<div class="absolute -z-1 top-0 left-1/2 -translate-x-1/2 duration-500 group-hover:-top-7.5">
 												<img src="assets/images/destinations/hotballon-right.png" alt="image" width="155" height="233" class="w-full max-w-75 mx-auto block duration-500">
@@ -391,10 +331,10 @@ const templateHtml = `
 									<div class="swiper-slide">
 										<div class="relative z-1 group">
 											<div class="rounded-3xl overflow-hidden">
-												<a href="destination-detail.html"><img src="assets/images/destinations/style1/pic3.jpg" width="309" height="500" alt="Image" class="w-full h-125 object-cover object-center"></a>
+												<a href="/destinations"><img src="https://source.unsplash.com/700x1000/?lonavala,maharashtra" width="309" height="500" alt="Lonavala, Maharashtra" class="w-full h-125 object-cover object-center" loading="lazy"></a>
 											</div>
 											<div>
-												<h3 class="text-28"><a href="destination-detail.html" class="block text-primary bg-white text-center p-5 rounded-3xl absolute left-0 right-0 -bottom-px duration-500 group-hover:text-white group-hover:bg-primary">Hong Kong</a></h3>
+												<h3 class="text-28"><a href="/destinations" class="block text-primary bg-white text-center p-5 rounded-3xl absolute left-0 right-0 -bottom-px duration-500 group-hover:text-white group-hover:bg-primary">Lonavala</a></h3>
 											</div>
 											<div class="absolute -z-1 top-0 left-1/2 -translate-x-1/2 duration-500 group-hover:-top-7.5">
 												<img src="assets/images/destinations/hotballon-right.png" alt="image" width="155" height="233" class="w-full max-w-75 mx-auto block duration-500">
@@ -405,10 +345,10 @@ const templateHtml = `
 									<div class="swiper-slide">
 										<div class="relative z-1 group">
 											<div class="rounded-3xl overflow-hidden">
-												<a href="destination-detail.html"><img src="assets/images/destinations/style1/pic4.jpg" width="309" height="500" alt="Image" class="w-full h-125 object-cover object-center"></a>
+												<a href="/destinations"><img src="https://source.unsplash.com/700x1000/?mahabaleshwar,maharashtra" width="309" height="500" alt="Mahabaleshwar, Maharashtra" class="w-full h-125 object-cover object-center" loading="lazy"></a>
 											</div>
 											<div>
-												<h3 class="text-28"><a href="destination-detail.html" class="block text-primary bg-white text-center p-5 rounded-3xl absolute left-0 right-0 -bottom-px duration-500 group-hover:text-white group-hover:bg-primary">Thailand</a></h3>
+												<h3 class="text-28"><a href="/destinations" class="block text-primary bg-white text-center p-5 rounded-3xl absolute left-0 right-0 -bottom-px duration-500 group-hover:text-white group-hover:bg-primary">Mahabaleshwar</a></h3>
 											</div>
 											<div class="absolute -z-1 top-0 left-1/2 -translate-x-1/2 duration-500 group-hover:-top-7.5">
 												<img src="assets/images/destinations/hotballon-right.png" alt="image" width="155" height="233" class="w-full max-w-75 mx-auto block duration-500">
@@ -419,10 +359,10 @@ const templateHtml = `
 									<div class="swiper-slide">
 										<div class="relative z-1 group">
 											<div class="rounded-3xl overflow-hidden">
-												<a href="destination-detail.html"><img src="assets/images/destinations/style1/pic5.jpg" width="309" height="500" alt="Image" class="w-full h-125 object-cover object-center"></a>
+												<a href="/destinations"><img src="https://source.unsplash.com/700x1000/?nashik,vineyard,india" width="309" height="500" alt="Nashik, Maharashtra" class="w-full h-125 object-cover object-center" loading="lazy"></a>
 											</div>
 											<div>
-												<h3 class="text-28"><a href="destination-detail.html" class="block text-primary bg-white text-center p-5 rounded-3xl absolute left-0 right-0 -bottom-px duration-500 group-hover:text-white group-hover:bg-primary">Bangkok</a></h3>
+												<h3 class="text-28"><a href="/destinations" class="block text-primary bg-white text-center p-5 rounded-3xl absolute left-0 right-0 -bottom-px duration-500 group-hover:text-white group-hover:bg-primary">Nashik</a></h3>
 											</div>
 											<div class="absolute -z-1 top-0 left-1/2 -translate-x-1/2 duration-500 group-hover:-top-7.5">
 												<img src="assets/images/destinations/hotballon-right.png" alt="image" width="155" height="233" class="w-full max-w-75 mx-auto block duration-500">
@@ -433,10 +373,10 @@ const templateHtml = `
 									<div class="swiper-slide">
 										<div class="relative z-1 group">
 											<div class="rounded-3xl overflow-hidden">
-												<a href="destination-detail.html"><img src="assets/images/destinations/style1/pic6.jpg" width="309" height="500" alt="Image" class="w-full h-125 object-cover object-center"></a>
+												<a href="/destinations"><img src="https://source.unsplash.com/700x1000/?ajanta-caves,aurangabad" width="309" height="500" alt="Aurangabad, Maharashtra" class="w-full h-125 object-cover object-center" loading="lazy"></a>
 											</div>
 											<div>
-												<h3 class="text-28"><a href="destination-detail.html" class="block text-primary bg-white text-center p-5 rounded-3xl absolute left-0 right-0 -bottom-px duration-500 group-hover:text-white group-hover:bg-primary">Tokyo</a></h3>
+												<h3 class="text-28"><a href="/destinations" class="block text-primary bg-white text-center p-5 rounded-3xl absolute left-0 right-0 -bottom-px duration-500 group-hover:text-white group-hover:bg-primary">Aurangabad</a></h3>
 											</div>
 											<div class="absolute -z-1 top-0 left-1/2 -translate-x-1/2 duration-500 group-hover:-top-7.5">
 												<img src="assets/images/destinations/hotballon-right.png" alt="image" width="155" height="233" class="w-full max-w-75 mx-auto block duration-500">
@@ -447,10 +387,10 @@ const templateHtml = `
 									<div class="swiper-slide">
 										<div class="relative z-1 group">
 											<div class="rounded-3xl overflow-hidden">
-												<a href="destination-detail.html"><img src="assets/images/destinations/style1/pic7.jpg" width="309" height="500" alt="Image" class="w-full h-125 object-cover object-center"></a>
+												<a href="/destinations"><img src="https://source.unsplash.com/700x1000/?alibaug,beach,india" width="309" height="500" alt="Alibaug, Maharashtra" class="w-full h-125 object-cover object-center" loading="lazy"></a>
 											</div>
 											<div>
-												<h3 class="text-28"><a href="destination-detail.html" class="block text-primary bg-white text-center p-5 rounded-3xl absolute left-0 right-0 -bottom-px duration-500 group-hover:text-white group-hover:bg-primary">Spain</a></h3>
+												<h3 class="text-28"><a href="/destinations" class="block text-primary bg-white text-center p-5 rounded-3xl absolute left-0 right-0 -bottom-px duration-500 group-hover:text-white group-hover:bg-primary">Alibaug</a></h3>
 											</div>
 											<div class="absolute -z-1 top-0 left-1/2 -translate-x-1/2 duration-500 group-hover:-top-7.5">
 												<img src="assets/images/destinations/hotballon-right.png" alt="image" width="155" height="233" class="w-full max-w-75 mx-auto block duration-500">
@@ -461,10 +401,10 @@ const templateHtml = `
 									<div class="swiper-slide">
 										<div class="relative z-1 group">
 											<div class="rounded-3xl overflow-hidden">
-												<a href="destination-detail.html"><img src="assets/images/destinations/style1/pic8.jpg" width="309" height="500" alt="Image" class="w-full h-125 object-cover object-center"></a>
+												<a href="/destinations"><img src="https://source.unsplash.com/700x1000/?tadoba,tiger,reserve" width="309" height="500" alt="Tadoba, Maharashtra" class="w-full h-125 object-cover object-center" loading="lazy"></a>
 											</div>
 											<div>
-												<h3 class="text-28"><a href="destination-detail.html" class="block text-primary bg-white text-center p-5 rounded-3xl absolute left-0 right-0 -bottom-px duration-500 group-hover:text-white group-hover:bg-primary">California</a></h3>
+												<h3 class="text-28"><a href="/destinations" class="block text-primary bg-white text-center p-5 rounded-3xl absolute left-0 right-0 -bottom-px duration-500 group-hover:text-white group-hover:bg-primary">Tadoba</a></h3>
 											</div>
 											<div class="absolute -z-1 top-0 left-1/2 -translate-x-1/2 duration-500 group-hover:-top-7.5">
 												<img src="assets/images/destinations/hotballon-right.png" alt="image" width="155" height="233" class="w-full max-w-75 mx-auto block duration-500">

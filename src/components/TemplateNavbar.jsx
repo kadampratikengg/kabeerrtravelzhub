@@ -16,7 +16,7 @@ const navbarHtml = `
 					<span class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-300 top-8 w-4"></span>
 				</button>
 				<div class="lg:hidden fixed top-0 left-0 bg-black size-full duration-300 z-999 opacity-0 visible pointer-events-none menu-close fade-overlay"></div>
-				<div class="flex lg:justify-center lg:basis-auto lg:grow max-lg:flex-col justify-start font-base max-lg:fixed max-lg:h-screen max-lg:px-5 max-lg:top-0 max-lg:-left-75 max-lg:z-9999 max-lg:bg-white max-lg:w-72 max-lg:overflow-auto max-lg:duration-700 header-nav custom-scroll">
+				<div id="mobile-menu" class="flex lg:justify-center lg:basis-auto lg:grow max-lg:flex-col justify-start font-base max-lg:fixed max-lg:h-screen max-lg:px-5 max-lg:top-0 max-lg:-left-75 max-lg:z-9999 max-lg:bg-white max-lg:w-72 max-lg:overflow-auto max-lg:duration-700 header-nav custom-scroll">
 					<div class="flex items-center relative z-9 py-6.25 lg:hidden">
 						<a href="/" class="table-cell align-middle">
 							<img src="/assets/logo.png" alt="" class="object-contain duration-500">
@@ -26,7 +26,6 @@ const navbarHtml = `
 						<li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
 							<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="/">
 								<span class="inline-block">Home</span>
-								<i class="fas fa-chevron-right lg:!hidden !block size-7 !leading-7 text-center text-xs bg-black text-white float-end"></i>
 							</a>
 						</li>
 						<li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
@@ -37,32 +36,21 @@ const navbarHtml = `
 						<li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
 							<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="/pages">
 								<span class="inline-block">Pages</span>
-								<i class="fas fa-chevron-right lg:!hidden !block size-7 !leading-7 text-center text-xs bg-black text-white float-end"></i>
 							</a>
-							<ul class="lg:absolute lg:top-full lg:left-0 lg:bg-black lg:text-white lg:shadow-lg lg:min-w-48 lg:py-2 lg:hidden lg:group-hover:block lg:z-50">
-								<li><a href="/pages" class="block px-4 py-2 hover:bg-gray-700">Pages</a></li>
-								<li><a href="/pages#faq" class="block px-4 py-2 hover:bg-gray-700">Faq</a></li>
-								<li><a href="/pages#pricing" class="block px-4 py-2 hover:bg-gray-700">Pricing</a></li>
-								<li><a href="/pages#error" class="block px-4 py-2 hover:bg-gray-700">Error-404</a></li>
-								<li><a href="/pages#compare" class="block px-4 py-2 hover:bg-gray-700">Compare</a></li>
-							</ul>
 						</li>
 						<li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
 							<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="/destinations">
 								<span class="inline-block">Destinations</span>
-								<i class="fas fa-chevron-right lg:!hidden !block size-7 !leading-7 text-center text-xs bg-black text-white float-end"></i>
 							</a>
 						</li>
 						<li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
 							<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="/tours">
 								<span class="inline-block">Tours</span>
-								<i class="fas fa-chevron-right lg:!hidden !block size-7 !leading-7 text-center text-xs bg-black text-white float-end"></i>
 							</a>
 						</li>
 						<li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
 							<a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="/blogs">
 								<span class="inline-block">Blogs</span>
-								<i class="fas fa-chevron-right lg:!hidden !block size-7 !leading-7 text-center text-xs bg-black text-white float-end"></i>
 							</a>
 						</li>
 						<li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
@@ -71,23 +59,6 @@ const navbarHtml = `
 							</a>
 						</li>
 					</ul>
-					<div class="lg:hidden block max-lg:p-5 text-center mt-auto border-t border-gray-200">
-						<a href="#" class="block w-full bg-primary text-white py-2.5 rounded-lg font-semibold mb-3 hover:bg-opacity-90">Login</a>
-						<ul>
-							<li class="inline-block mx-0.5">
-								<a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-facebook-f" target="_blank" href="https://www.facebook.com/dexignzone"></a>
-							</li>
-							<li class="inline-block mx-0.5">
-								<a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-twitter" target="_blank" href="https://twitter.com/dexignzones"></a>
-							</li>
-							<li class="inline-block mx-0.5">
-								<a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-linkedin-in" target="_blank" href="https://www.linkedin.com/showcase/3686700/admin/"></a>
-							</li>
-							<li class="inline-block mx-0.5">
-								<a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-instagram" target="_blank" href="https://www.instagram.com/dexignzone/"></a>
-							</li>
-						</ul>
-					</div>
 				</div>
 				<div class="flex lg:justify-end lg:items-center z-9 h-20 xl:pl-8 max-lg:ms-auto">
 					<div class="flex items-center">
@@ -117,6 +88,48 @@ const navbarHtml = `
 </header>
 `;
 
+const initTemplateMobileMenu = (root) => {
+  const header = root.querySelector('.site-header');
+  if (!header) return undefined;
+
+  const toggler = header.querySelector('.xmenu-toggler');
+  const headerNav = header.querySelector('.header-nav');
+  const menuClose = header.querySelector('.menu-close');
+  if (!toggler || !headerNav || toggler.dataset.mobileMenuBound === 'true') {
+    return undefined;
+  }
+
+  toggler.dataset.mobileMenuBound = 'true';
+
+  const closeMenu = () => {
+    headerNav.classList.remove('show');
+    toggler.classList.remove('open');
+    toggler.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('overflow-hidden');
+  };
+
+  const toggleMenu = () => {
+    const isOpen = headerNav.classList.toggle('show');
+    toggler.classList.toggle('open', isOpen);
+    toggler.setAttribute('aria-expanded', String(isOpen));
+    document.body.classList.toggle('overflow-hidden', isOpen);
+  };
+
+  toggler?.addEventListener('click', toggleMenu);
+  menuClose?.addEventListener('click', closeMenu);
+
+  const links = headerNav.querySelectorAll('a');
+  links.forEach((link) => link?.addEventListener('click', closeMenu));
+
+  return () => {
+    toggler.removeEventListener('click', toggleMenu);
+    menuClose?.removeEventListener('click', closeMenu);
+    links.forEach((link) => link.removeEventListener('click', closeMenu));
+    closeMenu();
+    delete toggler.dataset.mobileMenuBound;
+  };
+};
+
 export default function TemplateNavbar() {
   useEffect(() => {
     const header = document.querySelector('.site-header');
@@ -130,7 +143,7 @@ export default function TemplateNavbar() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // Check initial state
 
     // Initialize any scripts if needed
@@ -138,8 +151,11 @@ export default function TemplateNavbar() {
       window.Travlla.initNavbar();
     }
 
+    const cleanupMobileMenu = initTemplateMobileMenu(document);
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      cleanupMobileMenu?.();
     };
   }, []);
 
